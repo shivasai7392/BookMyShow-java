@@ -17,6 +17,7 @@ public class Ticket extends BaseModel{
     private TicketStatus ticketStatus;
 
     @OneToMany
+    @JoinColumn(name = "ticket_id")
     private List<Payment> payments;
 
     private Date timeOfBooking;

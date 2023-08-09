@@ -21,6 +21,6 @@ public class User extends BaseModel{
 
     private String password;
 
-    @OneToMany
+    @OneToMany(mappedBy = "bookedBy")
     private List<Ticket> tickets;
 }

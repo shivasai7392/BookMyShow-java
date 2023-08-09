@@ -1,6 +1,7 @@
 package com.bms.bookmyshowjavaspringboot.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -17,6 +18,7 @@ public class Theatre extends BaseModel{
     private String address;
 
     @OneToMany
+    @JoinColumn(name = "theatre_id")
     private List<Auditorium> auditoriums;
 
     @ManyToOne
